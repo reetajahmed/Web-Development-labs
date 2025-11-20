@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #f7f9fa; color: #1c1d1f; line-height: 1.6; }
+
+.navbar {
+  position: sticky; top: 0; background: white; border-bottom: 1px solid #e4e4e4;
+  padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000; font-weight: 600; font-size: 14px;
+}
+.logo { font-size: 28px; font-weight: 800; color: #a435f0; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links span { cursor: pointer; }
+.nav-links span:hover { color: #a435f0; }
+.auth button {
+  padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+.login { border: 1px solid #1c1d1f; background: transparent; }
+.signup { background: #a435f0; color: white; border: none; margin-left: 8px; }
+
+.top-banner {
+  background: #e0d4ff; padding: 12px; text-align: center; font-size: 15px; color: #401b9c;
+}
+
+.hero {
+  text-align: center; padding: 5rem 2rem; background: linear-gradient(135deg, #f5f7fa, #e4edf5);
+}
+.hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; }
+.hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; color: #555; }
+.hero button {
+  background: #a435f0; color: white; border: none; padding: 14px 32px;
+  font-size: 1.1rem; font-weight: 700; border-radius: 6px; cursor: pointer;
+}
+
+.section-title {
+  text-align: left; padding: 4rem 2rem 2rem; font-size: 2rem; font-weight: 700;
+}
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; padding: 0 2rem; max-width: 1200px; margin: 0 auto;
+}
+
+.card {
+  background: white; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 1.2rem; }
+.card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+.card p { font-size: 0.9rem; color: #6a6f73; margin: 0.3rem 0; }
+.price { font-size: 1.3rem; font-weight: 800; margin-top: 0.8rem; }
+
+.promo {
+  background: #1c1d1f; color: white; padding: 5rem 2rem;
+  display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; justify-content: center;
+}
+.promo h2 { font-size: 2.8rem; font-weight: 800; }
+.promo ul { list-style: none; margin: 1.5rem 0; }
+.promo li { padding-left: 2rem; position: relative; margin: 1rem 0; font-size: 1.2rem; }
+.promo li::before { content: "✓"; color: #a435f0; position: absolute; left: 0; font-weight: bold; }
+.promo button { background: #a435f0; color: white; border: none; padding: 14px 32px; border-radius: 6px; font-weight: 700; cursor: pointer; }
+
+.companies {
+  padding: 5rem 2rem; text-align: center; background: white;
+}
+.companies h2 { font-size: 2rem; font-weight: 700; margin-bottom: 3rem; }
+.company-grid {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem;
+  opacity: 0.7;
+}
+.company-grid img { height: 50px; filter: grayscale(100%); transition: 0.3s; }
+.company-grid img:hover { filter: grayscale(0); opacity: 1; transform: scale(1.1); }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .promo { flex-direction: column; text-align: center; }
+}
